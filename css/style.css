@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb-fLMcx4rKFCHiEnWuvGThUFzIKBwfUn-tA&s');
+  }
+  
+  .navbar {
+    background-color: #000000;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 3rem;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: #3d3d3d;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3d3d3d;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    min-width: 150px;
+    z-index: 10;
+
+  }
+  
+  
+  .submenu li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    color: white;
+    transition: background 0.3s;
+  }
+  
+  .submenu li a:hover {
+    
+    background-color: #7777779d;
+  }
+  
+  .menu-item:hover .submenu {
+    display: block;
+  }
+  
+  /* mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+    
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #3d3d3d;
+      width: 100%;
+      display: none;
+      padding: 1rem 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  
+    .menu-item {
+      width: 100%;
+    }
+    .menu-item.open .submenu {
+        display: block;
+      }
+
+    .submenu {
+        display: none;
+        position: static;
+        background-color: #3d3d3d;
+        border-radius: 0;
+        min-width: auto;
+        padding-left: 1rem;
+        box-shadow: none;
+      }
+      .menu-item:hover .submenu {
+        display: none; 
+      }
+     ul{
+        list-style: none;
+      }
+    .submenu li a {
+      padding: 0.5rem 2rem;
+      font-size: 0.95rem;
+    }
+    .menu-item.open .submenu {
+        display: block;
+          background-color: #616161;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+    
+  }
+  
+  section{
+    padding: 2rem;
+    border: #000000 1rem solid;
+  }
+  section h1{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  section p{
+    font-size: 1.3rem;
+  }
+  section h2{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
