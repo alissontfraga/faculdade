@@ -16,12 +16,11 @@ menuItems.forEach(link => {
       const isOpen = item.classList.contains('open');
 
       if (!isOpen) {
-        e.preventDefault(); // só impede se for o primeiro clique
-        // fecha outros
+        e.preventDefault(); 
+        
         document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('open'));
         item.classList.add('open');
       } else {
-        // segundo clique: deixa rolar pro href
         item.classList.remove('open');
       }
     }
